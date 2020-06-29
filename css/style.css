@@ -1,0 +1,43 @@
+/* @import url('https://fonts.googleapis.com/css2?family=B612:wght@600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=B612&display=swap');
+body {
+    padding: 0;
+    background: black;
+    font-family: 'B612', sans-serif;
+    color: white;
+}
+.efb-tab {
+    border: 3px solid grey;
+    width: 100%;
+}
+.efb-condition {
+    height: 500px;
+}
+.efb-rwy-computation {
+    height: 250px;
+}
+.efb-base {
+    margin-top: 50px;
+}
+.efb-results {
+    height: 450px;
+}
+.efb-normal {
+    height: 200px;
+    line-height: 200px;
+}
+.efb-header {
+    height: 25px;
+    width: 100%;
+    background-color: rgb(110, 110, 110);
+    line-height: 25px;
+    text-transform: uppercase;
+    text-align: left;
+    text-indent: 10px;
+}
+.mt {
+    margin-top: 5px;
+}
+.condition-text {
+    text-align: right;
+}
