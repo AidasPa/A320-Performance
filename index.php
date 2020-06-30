@@ -10,47 +10,17 @@
 </head>
 
 <body>
-    <div class="container efb-base">
+    <div id="app" class="container efb-base">
         <div class="row center-md">
-            <div class="col-md-4">
-                <div class="efb-tab efb-condition">
-                    <div class="efb-header">
-                        conditions &#60;F3&#62;
-                    </div>
-                    <!-- CONDITIONS -->
-                    
-                    <div class="row">
-                        <div class="col-md-4">
-                            WIND
-                        </div>
-                        <div class="col-md-4">
-                            /kr
-                        </div>
-                        <div class="col-md-4 condition-field">
-                            <input type="text" name="" id="">
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="efb-tab efb-normal mt">
-                    NORMAL
-                </div>
-            </div>
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="efb-tab efb-rwy-computation"></div>
-                </div>
-                <div class="row">
-                    <div class="efb-tab efb-results mt">
-                        <div class="efb-header">
-                            results
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <conditions></conditions>
+            <rwy-computation></rwy-computation>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/components/condition-field.js"></script>
+    <script src="js/components/conditions.js"></script>
+    <script src="js/components/rwy-computation.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

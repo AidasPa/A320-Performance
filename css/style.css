@@ -1,17 +1,28 @@
-/* @import url('https://fonts.googleapis.com/css2?family=B612:wght@600&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=B612&display=swap');
+/* @font-face {
+    font-family: 'Blooming Elegant';
+    src: url('../fonts/Blooming\ Elegant\ Sans.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Blooming Elegant Bold';
+    src: url('../fonts/Blooming\ Elegant\ Sans\ Bold.otf') format('opentype');
+} */
+/* @import url(//db.onlinewebfonts.com/c/ed05b4a9a5a28a921411d57fca3da7af?family=ArnoldSamuelsW00-Regular); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 body {
     padding: 0;
     background: black;
-    font-family: 'B612', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     color: white;
+    
 }
 .efb-tab {
-    border: 3px solid grey;
+    border: 2px solid rgb(156, 156, 156);
     width: 100%;
 }
 .efb-condition {
     height: 500px;
+    font-size: 18px;
+    
 }
 .efb-rwy-computation {
     height: 250px;
@@ -38,6 +49,48 @@ body {
 .mt {
     margin-top: 5px;
 }
+.mt1 {
+    margin-top: 5px;
+}
+.ml {
+    margin-left: 10px;
+}
+.ml1 {
+    margin-left: -5px;
+}
 .condition-text {
-    text-align: right;
+    text-align: left;
+}
+
+.efb-blue {
+    color: rgb(60, 189, 249)
+}
+.efb-input {
+    background: black;
+    border: 3.5px solid lightgrey;
+    width: 100%;
+    height: 20px;
+    font-size: 18px;
+
+}
+.col-md-3-5 {
+    -ms-flex-preferred-size: 28.333%;
+    flex-basis: 28.333%;
+    max-width: 28.333%;
+}
+.efb-field-text {
+    text-align: left;
+    font-size:20px;
+    text-transform: uppercase;
+}
+.efb-field-group {
+    margin-top: 10px
+}
+.efb-field-text-full {
+    padding: 0;
+    padding-left: 1rem;
+}
+.efb-float-align-right {
+    text-align:right;
+    float:right
 }
