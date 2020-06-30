@@ -132,3 +132,19 @@ body {
 .efb-white {
     color: rgb(238, 238, 238);
 }
+.efb-orange {
+    color: rgb(255, 145, 0);
+}
+.efb-pretend-select {
+    width: auto !important;
+}
+.efb-dropbox-pretend {
+    right: 89px !important;
+}
+.efb-select-pretend-box {
+    background: rgb(110, 110, 110);
+    width: 200px;
+    padding-bottom: 10px;
+    transform: translate(-50%);
+    margin-left: 50%;
+}

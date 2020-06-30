@@ -1,14 +1,64 @@
 Vue.component('conditions', {
+    props: ['metar'],
     data() {
-        return {rwyConditions: [
-            {
-                value: 'dry',
-                name: 'Dry'
-            }, {
-                value: 'wet',
-                name: 'Wet'
-            }
-        ]
+        return {
+            rwyConditions: [
+                {
+                    value: 'dry',
+                    name: 'Dry'
+                }, {
+                    value: 'wet',
+                    name: 'Wet'
+                }
+            ],
+            airConds: [
+                {
+                    value: true,
+                    name: 'On (STD)'
+                }, {
+                    value: false,
+                    name: 'Off'
+                }
+            ],
+            thrusts: [
+                {
+                    value: 'flex',
+                    name: 'FLEX (STD)'
+                }, {
+                    value: 'toga',
+                    name: 'TOGA'
+                }
+            ],
+            antiIces: [
+                {
+                    value: 0,
+                    name: 'Off'
+                }, {
+                    value: 1,
+                    name: 'ENG'
+                }, {
+                    value: 2,
+                    name: 'ENG + WING'
+                }
+            ], 
+            configurations: [
+                {
+                    value: 'opt',
+                    name: 'OPT CONF (STD)'
+                }, {
+                    value: '1',
+                    name: '1 CONF'
+                }, {
+                    value: '1f',
+                    name: '1+F CONF'
+                }, {
+                    value: '2',
+                    name: '2 CONF'
+                }, {
+                    value: '3',
+                    name: '3 CONF'
+                }
+            ]
         }
     },
     template: `
@@ -22,15 +72,18 @@ Vue.component('conditions', {
                      label="wind"
                      units="°/kt" 
                      after="L 1"
+                     :value="metar ? metar.winds.dir + '/' + metar.winds.kt : ''"
                      ></condition-field>
                      <condition-field 
                      label="oat"
                      units="°C" 
+                     :value="metar ? metar.tempos.oat : ''"
                      after="ISA +11"
                      ></condition-field>
                      <condition-field 
                      label="qnh"
                      units="hPa" 
+                     :value="metar ? metar.qnh : ''"
                      after=""
                      ></condition-field>
                      <condition-field 
@@ -43,6 +96,7 @@ Vue.component('conditions', {
                      <condition-field 
                      label="a-ice"
                      :select="true"
+                     :selectItems="antiIces"
                      :select-blue="true"
                      after=""
                      ></condition-field>
@@ -57,19 +111,19 @@ Vue.component('conditions', {
                      <br />
                      <condition-field 
                      label="conf"
-                     units=""
+                     :selectItems="configurations"
                      :select="true"
                      after=""
                      ></condition-field>
                      <condition-field 
                      label="air cond"
-                     units=""
+                     :selectItems="airConds"
                      :select="true"
                      after=""
                      ></condition-field>
                      <condition-field 
                      label="thrust"
-                     units=""
+                     :selectItems="thrusts"
                      :select="true"
                      after=""
                      ></condition-field>
