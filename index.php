@@ -19,6 +19,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/components/condition-field.js"></script>
     <script src="js/components/conditions.js"></script>
+    <script src="js/components/results.js"></script>
     <script src="js/components/rwy-computation.js"></script>
     <script src="js/app.js"></script>
 </body>

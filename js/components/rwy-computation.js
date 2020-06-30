@@ -4,13 +4,7 @@ Vue.component('rwy-computation', {
                 <div class="row">
                     <div class="efb-tab efb-rwy-computation"></div>
                 </div>
-                <div class="row">
-                    <div class="efb-tab efb-results mt">
-                        <div class="efb-header">
-                            results
-                        </div>
-                    </div>
-                </div>
+                <results></results>
             </div>
     `
 })

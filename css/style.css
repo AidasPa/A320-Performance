@@ -20,8 +20,9 @@ body {
     width: 100%;
 }
 .efb-condition {
-    height: 500px;
+    /* height: 500px; */
     font-size: 18px;
+    padding-bottom: 10px;
     
 }
 .efb-rwy-computation {
@@ -31,7 +32,7 @@ body {
     margin-top: 50px;
 }
 .efb-results {
-    height: 450px;
+    height: 388px;
 }
 .efb-normal {
     height: 200px;
@@ -63,13 +64,13 @@ body {
 }
 
 .efb-blue {
-    color: rgb(60, 189, 249)
+    color: rgb(60, 205, 249)
 }
 .efb-input {
     background: black;
     border: 3.5px solid lightgrey;
     width: 100%;
-    height: 20px;
+    height: 21px;
     font-size: 18px;
 
 }
@@ -80,7 +81,7 @@ body {
 }
 .efb-field-text {
     text-align: left;
-    font-size:20px;
+    /* font-size:20px; */
     text-transform: uppercase;
 }
 .efb-field-group {
@@ -93,4 +94,41 @@ body {
 .efb-float-align-right {
     text-align:right;
     float:right
+}
+
+
+.efb-select-input-wrap {
+    position: relative;
+    height: auto;
+}
+.efb-select-input-wrap > .efb-dropbox {
+    position: absolute;
+    right: 2px;
+    background: #808080;
+    width: 25px;
+    top: 2.5px;
+    height: 23px;
+    box-sizing: border-box;
+    border-right: 2.5px solid lightgrey;
+    border-bottom: 2.5px solid #d3d3d3;
+    line-height: 20px;
+    cursor: pointer;
+}
+.efb-tow-field-text {
+    font-size: 22px;
+    font-weight: bold;
+}
+.efb-tow-input {
+    height: 25px;
+    font-size: 25px;
+}
+.efb-select-input {
+    height: 29px;
+    background: url('dropdown_arrow.png') no-repeat right;
+    -webkit-appearance: none;
+    background-size: 24px;
+    cursor: pointer;
+}
+.efb-white {
+    color: rgb(238, 238, 238);
 }
