@@ -13,19 +13,21 @@ foreach ($runways as $key => $singleAirport) {
         foreach ($runwaysFiltered as $key => $line) {
 
             $rwy = explode(';', $line);
-            $data = [];
+            // $data ;
 
             if (isset($_GET['metric'])) {
-                $data[$rwy[1]] = [
-                    'tora' => (int)$rwy[5] / 3.281,
-                    'toda' => (int)$rwy[8] / 3.281,
-                    'elev' => (int)$rwy[4]
+                $data = [
+                    'id' => $rwy[1],
+                    'tora' => (int) $rwy[5] / 3.281,
+                    'toda' => (int) $rwy[8] / 3.281,
+                    'elev' => (int) $rwy[4]
                 ];
             } else {
-                $data[$rwy[1]] = [
-                    'tora' => (int)$rwy[5],
-                    'toda' => (int)$rwy[8],
-                    'elev' => (int)$rwy[4]
+                $data = [
+                    'id' => $rwy[1],
+                    'tora' => (int) $rwy[5],
+                    'toda' => (int) $rwy[8],
+                    'elev' => (int) $rwy[4]
                 ];
             }
 

@@ -48,7 +48,7 @@ Vue.component('input-select-airport', {
         <input :value="input" @input="inputChanged" :class="['efb-input', 'efb-' + color, 'efb-pretend-select']">
         <div class="efb-dropbox efb-dropbox-pretend">&#11206;</div>
         <div v-if="showSuggestions" class="efb-select-pretend-box">
-            <p v-for="option in selectItems" @click="setAirportValue" :key="option.value">{{option.name}}</p>
+            <p style="cursor:pointer" v-for="option in selectItems" @click="setAirportValue" :key="option.value">{{option.name}}</p>
         </div>
     </div>
     `

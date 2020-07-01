@@ -5,18 +5,37 @@ Vue.component('rwy-computation', {
             const metar = await response.json();
 
             this.getRunways(airport);
-            this.$emit('metar-fetched', metar);
+            this.$store.commit('setMetar', metar)
         },
         async getRunways(airport) {
-            const response = await fetch(`/serivces/metar.php?ideant${airport.split(' / ')[0]}&metric`);
+            const response = await fetch(`/services/airport_rwy.php?ident=${airport.split(' / ')[0]}&metric`);
             const runways = await response.json();
             
+            const data = [];
             
+            runways.forEach((runway) => {
+                data.push({
+                    value: runway.id,
+                    name: runway.id + ' F/L',
+                    runway
+                });
+            });
+
+            this.$store.commit('setRunways', data);
+            this.selectedRunway = data[0].runway.id;
+        },
+        setRunway(value) {
+            this.selectedRunway = value;
+        },
+    },
+    computed: {
+        runway() {
+            return this.$store.state.runways.filter(rwy => rwy.runway.id == this.selectedRunway)[0];
         }
     },
     data() {
         return {
-            arptRunways: []
+            selectedRunway: null
         }
     },
     template: `
@@ -31,9 +50,10 @@ Vue.component('rwy-computation', {
                                 <input-select-airport @airportSet="getMetar" color="orange" />
                             </div>
                             <div class="col-md-6">
-                                <input-select-pretend color="blue" :selectItems="airptRunways"/>
+                                <input-select @value-changed="setRunway" :inputWidth="198" :selectBlue="true" :selectItems="$store.state.runways"/>
                             </div>
                         </div>
+                        <h2>TORA: {{ runway?.runway.tora }} m</h2>
                     </div>
                 </div>
                 <results></results>

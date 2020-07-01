@@ -23,31 +23,18 @@ $airports = explode("\n", $airportsRaw);
 $airportOnlyICAOs = [];
 
 foreach ($airports as $airport) {
-    $airportOnlyICAOs[] = explode('/', $airport)[0];
+    $exploded = explode('/', $airport);
+    // var_dump($exploded[1]);
+    // if ($exploded[1] != ' nil') {
+        $airportOnlyICAOs[] = $exploded[0];
+    // }
 }
-
-// $input = preg_quote($data->query, '~');
-// $result = preg_filter('~' . $input . '~', null, $airportOnlyICAOs);
-
-// $searchResult = [];
-// foreach ($result as $key => $value) {
-//     $searchResult[] = $airports[$key];
-// }
-
-// echo json_encode($searchResult);
 
 $searchResult = [];
 
 foreach ($airportOnlyICAOs as $key => $airport) {
-    if (strlen($data->query) === 2) {
-        $firstTwo = substr($airport, 0, 2);
-        if($firstTwo === $data->query) $searchResult[] = $airports[$key];
-    } else if (strlen($data->query) === 3) {
-        $firstThree = substr($data->query, 0, 3);
-        if($firstThree === $data->query) $searchResult[] = $airports[$key];
-    } else if (strlen($data->query) === 4) {
-        if($airport === $data->query) $searchResult[] = $airports[$key];
-    }
+    $search = substr($airport, 0, strlen($data->query));
+    if ($search === $data->query) $searchResult[] = $airports[$key];
 }
 
 echo json_encode($searchResult);

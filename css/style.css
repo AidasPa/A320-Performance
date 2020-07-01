@@ -64,7 +64,7 @@ body {
 }
 
 .efb-blue {
-    color: rgb(60, 205, 249)
+    color: rgb(0, 219, 255);
 }
 .efb-input {
     background: black;
@@ -72,7 +72,8 @@ body {
     width: 100%;
     height: 21px;
     font-size: 18px;
-
+    font-family: 'Roboto Mono', monospace;
+    outline: none;
 }
 .col-md-3-5 {
     -ms-flex-preferred-size: 28.333%;
@@ -106,7 +107,7 @@ body {
     right: 2px;
     background: #808080;
     width: 25px;
-    top: 2.5px;
+    top: 4px;
     height: 23px;
     box-sizing: border-box;
     border-right: 2.5px solid lightgrey;
@@ -133,13 +134,13 @@ body {
     color: rgb(238, 238, 238);
 }
 .efb-orange {
-    color: rgb(255, 145, 0);
+    color:  rgb(255, 191, 0);
 }
 .efb-pretend-select {
     width: auto !important;
 }
 .efb-dropbox-pretend {
-    right: 89px !important;
+    right: 67px !important;
 }
 .efb-select-pretend-box {
     background: rgb(110, 110, 110);
@@ -147,4 +148,5 @@ body {
     padding-bottom: 10px;
     transform: translate(-50%);
     margin-left: 50%;
+    position: absolute;
 }

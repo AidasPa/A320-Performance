@@ -1,5 +1,5 @@
 Vue.component('conditions', {
-    props: ['metar'],
+
     data() {
         return {
             rwyConditions: [
@@ -72,18 +72,18 @@ Vue.component('conditions', {
                      label="wind"
                      units="°/kt" 
                      after="L 1"
-                     :value="metar ? metar.winds.dir + '/' + metar.winds.kt : ''"
+                     :value="$store.state.metar.winds.dir + '/' + $store.state.metar.winds.kt"
                      ></condition-field>
                      <condition-field 
                      label="oat"
                      units="°C" 
-                     :value="metar ? metar.tempos.oat : ''"
+                     :value="$store.state.metar.tempos.oat"
                      after="ISA +11"
                      ></condition-field>
                      <condition-field 
                      label="qnh"
                      units="hPa" 
-                     :value="metar ? metar.qnh : ''"
+                     :value="$store.state.metar.qnh"
                      after=""
                      ></condition-field>
                      <condition-field 
