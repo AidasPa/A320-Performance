@@ -28,11 +28,6 @@ Vue.component('rwy-computation', {
             this.selectedRunway = value;
         },
     },
-    computed: {
-        runway() {
-            return this.$store.state.runways.filter(rwy => rwy.runway.id == this.selectedRunway)[0];
-        }
-    },
     data() {
         return {
             selectedRunway: null
@@ -53,8 +48,9 @@ Vue.component('rwy-computation', {
                                 <input-select @value-changed="setRunway" :inputWidth="198" :selectBlue="true" :selectItems="$store.state.runways"/>
                             </div>
                         </div>
-                        <h2>TORA: {{ runway?.runway.tora }} m</h2>
-                    </div>
+                        <runway-info :selectedRunway="selectedRunway"/>
+
+                        </div>
                 </div>
                 <results></results>
             </div>

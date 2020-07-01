@@ -24,6 +24,7 @@
     <script src="js/components/condition-field.js"></script>
     <script src="js/components/conditions.js"></script>
     <script src="js/components/results.js"></script>
+    <script src="js/components/runway_info.js"></script>
     <script src="js/components/rwy-computation.js"></script>
     <script src="js/store.js"></script>
     <script src="js/app.js"></script>

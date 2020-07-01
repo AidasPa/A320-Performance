@@ -64,7 +64,7 @@ body {
 }
 
 .efb-blue {
-    color: rgb(0, 219, 255);
+    color: #97ecff
 }
 .efb-input {
     background: black;
@@ -134,7 +134,7 @@ body {
     color: rgb(238, 238, 238);
 }
 .efb-orange {
-    color:  rgb(255, 191, 0);
+    color:  #ffe15b;
 }
 .efb-pretend-select {
     width: auto !important;
@@ -149,4 +149,7 @@ body {
     transform: translate(-50%);
     margin-left: 50%;
     position: absolute;
+}
+.efb-green {
+    color: #c5ff68;
 }
